@@ -1,0 +1,9 @@
+README.md
+setup.py
+nepse/__init__.py
+nepse/stonk.py
+nepse.egg-info/PKG-INFO
+nepse.egg-info/SOURCES.txt
+nepse.egg-info/dependency_links.txt
+nepse.egg-info/requires.txt
+nepse.egg-info/top_level.txt
