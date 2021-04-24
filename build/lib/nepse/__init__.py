@@ -1,1 +1,0 @@
-from nepse.stonk import NEPSE
