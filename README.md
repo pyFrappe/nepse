@@ -61,6 +61,11 @@ makeChart= init.createChart('CGH',theme='dark',high=False,low=False)#returns abs
 csv = init.saveCSV('CGH',start_date='2021-02-07')#filename,start_date and  end_date are optional
 
 
+indices = init.indices(sector='NEPSE Index',start_date='2021-03-04',end_date='2021-03-07')
+
+floorsheets = init.floorsheets()
+
+
 ```
 
 
