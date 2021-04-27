@@ -240,6 +240,18 @@ class NEPSE:
             filename = f'{scrip.upper()}_{str(time.time())}.csv'
         pd.DataFrame(resp).to_csv(filename)
         return os.path.abspath(filename)
+    
+    def checkIPO(self,scrip,boid):
+        """
+        CHECK IPO RESULT
+
+        """
+
+        scripID = [resp['id'] for resp in requests.get('https://iporesult.cdsc.com.np/result/companyShares/fileUploaded').json()['body'] if resp['scrip']==scrip.upper()][0]
+
+        return requests.post(
+            'https://iporesult.cdsc.com.np/result/result/check',
+            json={"companyShareId":scripID,"boid":boid}).json()
 
     
 
