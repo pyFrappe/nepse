@@ -65,6 +65,11 @@ indices = init.indices(sector='NEPSE Index',start_date='2021-03-04',end_date='20
 
 floorsheets = init.floorsheets()
 
+#CHECK IPO
+result = init.checkIPO(scrip,boid)
+{'success': False, 'message': 'Sorry, not alloted for the entered BOID. ', 'body': None}
+
+
 
 ```
 
