@@ -26,12 +26,16 @@ class NEPSE:
         #Thanks to Saya for quick patch
         self.ID_MAPPING ={
 
+            3: 896,
             5: 167,
+            7: 359,
+            8: 890,
             11: 318,
             12: 482,
             13: 574,
             14: 895,
             16: 620,
+            15: 582,
             17: 345,
             18: 326,
             19: 515,
@@ -42,6 +46,9 @@ class NEPSE:
             29: 537,
             30: 352,
             31: 407,
+            32: 287,
+            33: 479,
+            34: 613,
         }
         
         self.sectors=[{'id': 51, 'indexCode': 'BANKSUBIND', 'indexName': 'Banking SubIndex', 'description': 'Index of All the Listed Commercial Banks', 'sectorMaster': {'id': 37, 'sectorDescription': 'Commercial Banks', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Rastra Bank'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 76657.9194}, {'id': 52, 'indexCode': 'HOTELIND', 'indexName': 'Hotels And Tourism Index', 'description': 'All the companies Listed in Hotels Group', 'sectorMaster': {'id': 39, 'sectorDescription': 'Hotels and Tourism', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 1604.146}, {'id': 53, 'indexCode': 'OTHERSIND', 'indexName': 'Others Index', 'description': 'All the companies Listed in Others  Group', 'sectorMaster': {'id': 40, 'sectorDescription': 'Others', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 
