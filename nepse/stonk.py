@@ -22,6 +22,28 @@ class NEPSE:
             'referer': 'https://newweb.nepalstock.com.np/',
             'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
         }
+        #https://github.com/Samrid-Pandit/nepse-api/blob/master/nepse/utils.py#L13
+        #Thanks to Saya for quick patch
+        self.ID_MAPPING ={
+
+            5: 167,
+            11: 318,
+            12: 482,
+            13: 574,
+            14: 895,
+            16: 620,
+            17: 345,
+            18: 326,
+            19: 515,
+            24: 662,
+            25: 198,
+            27: 511,
+            28: 469,
+            29: 537,
+            30: 352,
+            31: 407,
+        }
+        
         self.sectors=[{'id': 51, 'indexCode': 'BANKSUBIND', 'indexName': 'Banking SubIndex', 'description': 'Index of All the Listed Commercial Banks', 'sectorMaster': {'id': 37, 'sectorDescription': 'Commercial Banks', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Rastra Bank'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 76657.9194}, {'id': 52, 'indexCode': 'HOTELIND', 'indexName': 'Hotels And Tourism Index', 'description': 'All the companies Listed in Hotels Group', 'sectorMaster': {'id': 39, 'sectorDescription': 'Hotels and Tourism', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 1604.146}, {'id': 53, 'indexCode': 'OTHERSIND', 'indexName': 'Others Index', 'description': 'All the companies Listed in Others  Group', 'sectorMaster': {'id': 40, 'sectorDescription': 'Others', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 
             16655.8076}, {'id': 54, 'indexCode': 'HYDPOWIND', 'indexName': 'HydroPower Index', 'description': 'All the companies listed in Hydropower Group', 'sectorMaster': {'id': 41, 'sectorDescription': 'Hydro Power', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 11375.7071}, {'id': 55, 'indexCode': 'DEVBANKIND', 'indexName': 'Development Bank Index', 'description': 'Index of  the listed development Banks', 'sectorMaster': {'id': 44, 'sectorDescription': 'Development Banks', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Rastra Bank'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 3717.0987}, {'id': 56, 'indexCode': 'MANPROCIND', 'indexName': 'Manufacturing And Processing', 'description': 'Manufacturing and Processing Index', 'sectorMaster': {'id': 38, 'sectorDescription': 'Manufacturing And Processing', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 2425.7603}, {'id': 57, 'indexCode': 'SENSIND', 'indexName': 'Sensitive Index', 'description': 'Sensitive Index', 'sectorMaster': {'id': 51, 
             'sectorDescription': 'ALL', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 297165.8107}, {'id': 58, 'indexCode': 'NEPSE', 'indexName': 'NEPSE Index', 'description': 'All Equity Index', 'sectorMaster': {'id': 51, 'sectorDescription': 'ALL', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'Y', 'baseYearMarketCapitalization': 138470.1734}, {'id': 59, 'indexCode': 'NONLIFIND', 'indexName': 'Non Life Insurance', 'description': 'All Non Life Insurance Index', 'sectorMaster': {'id': 43, 'sectorDescription': 'Non Life Insurance', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Insurance Board'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 1914.4838}, {'id': 60, 'indexCode': 'FININD', 'indexName': 'Finance Index', 'description': 'Index of Finance Companies', 'sectorMaster': {'id': 45, 'sectorDescription': 'Finance', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Rastra Bank'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 3327.7232}, {'id': 61, 'indexCode': 'TRDIND', 'indexName': 'Trading Index', 'description': 'All Trading Companies', 'sectorMaster': {'id': 42, 'sectorDescription': 'Tradings', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 581.9577}, {'id': 62, 'indexCode': 'FLOATIND', 'indexName': 'Float Index', 'description': 'All Float Index', 'sectorMaster': {'id': 51, 'sectorDescription': 'ALL', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 698600.0336}, {'id': 63, 'indexCode': 'SENSFLTIND', 'indexName': 'Sensitive Float Index', 'description': 'All Sensitive Float Index', 'sectorMaster': {'id': 51, 'sectorDescription': 'ALL', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 308604.0344}, {'id': 64, 'indexCode': 'MICRFININD', 'indexName': 'Microfinance Index', 'description': 'all microfinance company index', 'sectorMaster': {'id': 49, 'sectorDescription': 'Microfinance', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Rastra Bank'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 7133.2871}, {'id': 65, 'indexCode': 'LIFINSIND', 'indexName': 'Life Insurance', 'description': 'All Life Insurance Index', 'sectorMaster': {'id': 50, 'sectorDescription': 'Life Insurance', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Insurance Board'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 2119.7235}, {'id': 66, 'indexCode': 'MUTUALIND', 'indexName': 'Mutual Fund', 
@@ -29,6 +51,11 @@ class NEPSE:
         self.host = 'https://newweb.nepalstock.com.np/api/'
         self.securities = requests.get(self.host+'nots/securityDailyTradeStat/58',headers=self.headers).json()
         pass
+    
+    def fetchPayload(self):
+        _id=requests.get(self.host+'nots/nepse-data/market-open',headers=self.headers).json()['id']
+        return self.ID_MAPPING[_id]
+
 
     
     def dateFilter(self,working_date,data):
@@ -83,6 +110,7 @@ class NEPSE:
             page+=1
             if isLast:
                 return content
+    
     def floorsheets(self):
         """
         Threaded Scraper For FloorSheets as we need to scrape more than 75k Data
@@ -90,11 +118,28 @@ class NEPSE:
         """
         q = queue.Queue()
         contents=[]
-        response = requests.get(self.host+'nots/nepse-data/floorsheet?size=2000&sort=contractId,desc', headers=self.headers)
+        response = requests.post(self.host+'nots/nepse-data/floorsheet?size=500&sort=contractId,desc', headers=self.headers,json={'id':198})
+        if not response.json():
+            data={'id':self.fetchPayload()}
+            response = requests.post(self.host+'nots/nepse-data/floorsheet?size=500&sort=contractId,desc', headers=self.headers,json=data)
+
         pages = response.json()['floorsheets']['totalPages']
 
         def scrapePage(pageNUM):
-            response = requests.get(self.host+f'nots/nepse-data/floorsheet?page={pageNUM}&size=2000&sort=contractId,desc', headers=self.headers)
+            while 1:
+                tried=0
+                try:
+            
+                    response = requests.post(self.host+f'nots/nepse-data/floorsheet?page={pageNUM}&size=500&sort=contractId,desc', headers=self.headers,json={'id':198})
+                    if not response.json():
+                        data={'id':self.fetchPayload()}
+                        response = requests.post(self.host+f'nots/nepse-data/floorsheet?page={pageNUM}&size=500&sort=contractId,desc', headers=self.headers,json=data)
+                    break
+                except Exception:
+                    tried+=1
+                    if tried>5:
+                        raise Exception('NEPSE RATELIMITED')
+                    pass
             return response.json()['floorsheets']['content']
 
         def queGET(q):
@@ -160,7 +205,12 @@ class NEPSE:
         Get Live Price of All The Securities in one call or specify
 
         """
-        resp = requests.get(self.host+'nots/nepse-data/today-price?&size=500',headers=self.headers).json()['content']
+
+        resp = requests.post(self.host+'nots/nepse-data/today-price?&size=500',headers=self.headers,json={'id':198}).json()
+        if not resp:
+            data={'id':self.fetchPayload()}
+            resp = requests.post(self.host+'nots/nepse-data/today-price?&size=500', headers=self.headers, json=data).json()
+        resp=resp['content']
         if scrip ==None:
             return resp
         return [script for script in resp if script['symbol']==scrip.upper()][0]

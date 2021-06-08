@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import codecs
 from os import path
 this_directory = path.abspath(path.dirname(__file__))
-VERSION = '0.1.0'
+VERSION = '0.1.1'
 DESCRIPTION = 'Python Wrapper for Newweb Nepse'
 with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     LONG_DESCRIPTION = f.read()
