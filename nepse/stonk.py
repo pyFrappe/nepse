@@ -293,7 +293,6 @@ class NEPSE:
         return {'file':abspath}
 
     def saveCSV(self,scrip,start_date=None,end_date=None,filename=None):
-        scripID = [security for security in self.securities if security['symbol']==scrip.upper()][0]['securityId']
         resp = self.getChartHistory(scrip,start_date,end_date)
         if not filename:
             filename = f'{scrip.upper()}_{str(time.time())}.csv'
