@@ -215,11 +215,7 @@ class NEPSE:
 
         """
 
-        resp = requests.post(self.host+'nots/nepse-data/today-price?&size=500',headers=self.headers,json={'id':198}).json()
-        if not resp:
-            data={'id':self.fetchPayload()}
-            resp = requests.post(self.host+'nots/nepse-data/today-price?&size=500', headers=self.headers, json=data).json()
-        resp=resp['content']
+        resp = requests.get(self.host+'/nots/securityDailyTradeStat/58',headers=self.headers).json()
         if scrip ==None:
             return resp
         return [script for script in resp if script['symbol']==scrip.upper()][0]
@@ -317,4 +313,4 @@ class NEPSE:
 
 if __name__ =='__main__':
     data= NEPSE()
-    print(data.indices())
+    print(data.todayPrice('CGH'))
