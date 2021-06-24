@@ -4,7 +4,7 @@
 Nepse is a realtime nepse scraper which communicates with newweb.nepalstock.com.np, to fetch and return required stats.
 
 #### NOTE :
-Nepse's Beta API is not really stable even though it provides realtime information . There is a very reliable and stable api alternative you may wish to try https://api.sheezh.com/nepse/documentation. I will add two sources including nepse's and sheezh's on this module soon . Thankyou for using it!
+Nepse's Beta API is not really stable even though it provides realtime information . There is a very reliable and stable api alternative you may wish to try https://api.sheezh.com/nepse/documentation. I will add two sources including nepse's and sheezh's on this module soon . Thankyou for using it ! Discord : https://discord.com/invite/8jUYzHqkUZ
 
 ## Features
 
