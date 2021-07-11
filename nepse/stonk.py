@@ -39,10 +39,10 @@ class NEPSE:
             17: 345,
             18: 326,
             19: 515,
-            23:564,
+            23: 564,
             24: 662,
             25: 198,
-            26:600,
+            26: 600,
             27: 511,
             28: 469,
             29: 537,
@@ -53,7 +53,7 @@ class NEPSE:
             34: 613,
         }
         
-        self.sectors=[{'id': 51, 'indexCode': 'BANKSUBIND', 'indexName': 'Banking SubIndex', 'description': 'Index of All the Listed Commercial Banks', 'sectorMaster': {'id': 37, 'sectorDescription': 'Commercial Banks', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Rastra Bank'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 76657.9194}, {'id': 52, 'indexCode': 'HOTELIND', 'indexName': 'Hotels And Tourism Index', 'description': 'All the companies Listed in Hotels Group', 'sectorMaster': {'id': 39, 'sectorDescription': 'Hotels and Tourism', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 1604.146}, {'id': 53, 'indexCode': 'OTHERSIND', 'indexName': 'Others Index', 'description': 'All the companies Listed in Others  Group', 'sectorMaster': {'id': 40, 'sectorDescription': 'Others', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 
+        self.sectors = [{'id': 51, 'indexCode': 'BANKSUBIND', 'indexName': 'Banking SubIndex', 'description': 'Index of All the Listed Commercial Banks', 'sectorMaster': {'id': 37, 'sectorDescription': 'Commercial Banks', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Rastra Bank'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 76657.9194}, {'id': 52, 'indexCode': 'HOTELIND', 'indexName': 'Hotels And Tourism Index', 'description': 'All the companies Listed in Hotels Group', 'sectorMaster': {'id': 39, 'sectorDescription': 'Hotels and Tourism', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 1604.146}, {'id': 53, 'indexCode': 'OTHERSIND', 'indexName': 'Others Index', 'description': 'All the companies Listed in Others  Group', 'sectorMaster': {'id': 40, 'sectorDescription': 'Others', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 
             16655.8076}, {'id': 54, 'indexCode': 'HYDPOWIND', 'indexName': 'HydroPower Index', 'description': 'All the companies listed in Hydropower Group', 'sectorMaster': {'id': 41, 'sectorDescription': 'Hydro Power', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 11375.7071}, {'id': 55, 'indexCode': 'DEVBANKIND', 'indexName': 'Development Bank Index', 'description': 'Index of  the listed development Banks', 'sectorMaster': {'id': 44, 'sectorDescription': 'Development Banks', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Rastra Bank'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 3717.0987}, {'id': 56, 'indexCode': 'MANPROCIND', 'indexName': 'Manufacturing And Processing', 'description': 'Manufacturing and Processing Index', 'sectorMaster': {'id': 38, 'sectorDescription': 'Manufacturing And Processing', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 2425.7603}, {'id': 57, 'indexCode': 'SENSIND', 'indexName': 'Sensitive Index', 'description': 'Sensitive Index', 'sectorMaster': {'id': 51, 
             'sectorDescription': 'ALL', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 297165.8107}, {'id': 58, 'indexCode': 'NEPSE', 'indexName': 'NEPSE Index', 'description': 'All Equity Index', 'sectorMaster': {'id': 51, 'sectorDescription': 'ALL', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'Y', 'baseYearMarketCapitalization': 138470.1734}, {'id': 59, 'indexCode': 'NONLIFIND', 'indexName': 'Non Life Insurance', 'description': 'All Non Life Insurance Index', 'sectorMaster': {'id': 43, 'sectorDescription': 'Non Life Insurance', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Insurance Board'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 1914.4838}, {'id': 60, 'indexCode': 'FININD', 'indexName': 'Finance Index', 'description': 'Index of Finance Companies', 'sectorMaster': {'id': 45, 'sectorDescription': 'Finance', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Rastra Bank'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 3327.7232}, {'id': 61, 'indexCode': 'TRDIND', 'indexName': 'Trading Index', 'description': 'All Trading Companies', 'sectorMaster': {'id': 42, 'sectorDescription': 'Tradings', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 581.9577}, {'id': 62, 'indexCode': 'FLOATIND', 'indexName': 'Float Index', 'description': 'All Float Index', 'sectorMaster': {'id': 51, 'sectorDescription': 'ALL', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 698600.0336}, {'id': 63, 'indexCode': 'SENSFLTIND', 'indexName': 'Sensitive Float Index', 'description': 'All Sensitive Float Index', 'sectorMaster': {'id': 51, 'sectorDescription': 'ALL', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 308604.0344}, {'id': 64, 'indexCode': 'MICRFININD', 'indexName': 'Microfinance Index', 'description': 'all microfinance company index', 'sectorMaster': {'id': 49, 'sectorDescription': 'Microfinance', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Rastra Bank'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 7133.2871}, {'id': 65, 'indexCode': 'LIFINSIND', 'indexName': 'Life Insurance', 'description': 'All Life Insurance Index', 'sectorMaster': {'id': 50, 'sectorDescription': 'Life Insurance', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Insurance Board'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 2119.7235}, {'id': 66, 'indexCode': 'MUTUALIND', 'indexName': 'Mutual Fund', 
             'description': 'All Mutual Fund Index', 'sectorMaster': {'id': 46, 'sectorDescription': 'Mutual Fund', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 25704.9716}, {'id': 67, 'indexCode': 'INVIDX', 'indexName': 'Investment Index', 'description': 'All Investment Index', 'sectorMaster': {'id': 52, 'sectorDescription': 'Investment', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Rastra Bank'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 290499.5699}]
@@ -176,16 +176,12 @@ class NEPSE:
         resp= requests.get(self.host+f'nots/index/history/{index_id}?size=500',headers=self.headers).json()['content']
         if start_date:
             start_date = self.dateFilter(start_date,resp)
-            start_index = next((index for (index, d) in enumerate(resp) if d["businessDate"] == start_date), None)
-            resp = resp[start_index:]
+            start_index = [index for (index, d) in enumerate(resp) if d["businessDate"] == start_date][0]+1
+            resp = resp[:start_index]
         if end_date:
-            
             end_date = self.dateFilter(end_date,resp)
-            end_index =next((index for (index, d) in enumerate(resp) if d["businessDate"] == end_date), None)+1
-            if start_date and end_date:
-                if end_index == start_index:
-                    end_index =-1
-            resp = resp[:end_index]
+            end_index =[index for (index, d) in enumerate(resp) if d["businessDate"] == end_date][0]
+            resp = resp[end_index:]
         return resp
 
 
@@ -307,10 +303,7 @@ class NEPSE:
             'https://iporesult.cdsc.com.np/result/result/check',
             json={"companyShareId":scripID,"boid":boid}).json()
 
-    
-
-
 
 if __name__ =='__main__':
     data= NEPSE()
-    print(data.todayPrice('CGH'))
+    print(data.indices('NEPSE Index', '2021-07-11','2021-08-11'))
