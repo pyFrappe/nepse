@@ -306,4 +306,4 @@ class NEPSE:
 
 if __name__ =='__main__':
     data= NEPSE()
-    print(data.indices('NEPSE Index', '2021-07-11','2021-08-11'))
+    print(data.indices('NEPSE Index', '2021-05-11','2021-08-11'))
