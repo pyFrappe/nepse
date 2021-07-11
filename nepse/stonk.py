@@ -10,6 +10,7 @@ import threading
 class NEPSE:
 
     def __init__(self):
+        
         self.headers= {
             'authority': 'newweb.nepalstock.com.np',
             'sec-ch-ua': '^\\^Google',
@@ -22,9 +23,11 @@ class NEPSE:
             'referer': 'https://newweb.nepalstock.com.np/',
             'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
         }
+        
         #https://github.com/Samrid-Pandit/nepse-api/blob/master/nepse/utils.py#L13
         #Thanks to Saya for quick patch
-        self.ID_MAPPING ={
+        
+        self.ID_MAPPING = {
 
             3: 896,
             5: 167,
@@ -62,7 +65,7 @@ class NEPSE:
         pass
     
     def fetchPayload(self):
-        _id=requests.get(self.host+'nots/nepse-data/market-open',headers=self.headers).json()['id']
+        _id = requests.get(self.host+'nots/nepse-data/market-open',headers=self.headers).json()['id']
         return self.ID_MAPPING[_id]
 
 
@@ -122,8 +125,10 @@ class NEPSE:
     
     def floorsheets(self):
         """
+        
         Threaded Scraper For FloorSheets as we need to scrape more than 75k Data
         Returns in less than 2 seconds.
+        
         """
         q = queue.Queue()
         contents=[]
@@ -180,7 +185,7 @@ class NEPSE:
             resp = resp[:start_index]
         if end_date:
             end_date = self.dateFilter(end_date,resp)
-            end_index =[index for (index, d) in enumerate(resp) if d["businessDate"] == end_date][0]
+            end_index = [index for (index, d) in enumerate(resp) if d["businessDate"] == end_date][0]
             resp = resp[end_index:]
         return resp
 
@@ -198,7 +203,7 @@ class NEPSE:
     def alerts(self):
         """
         
-        returns alerts and news published by 
+        Returns alerts and news
         
         """
         resp = requests.get(self.host+'nots/news/media/news-and-alerts',headers=self.headers).json()
@@ -250,7 +255,6 @@ class NEPSE:
         return resp
     
     def createChart(self,scrip,theme='dark',start_date=None,end_date=None,close=True,high=True,low=True):
-
         symbol = scrip.upper()
         if theme.upper()=='DARK':
             plt.style.use(['dark_background'])
@@ -293,10 +297,10 @@ class NEPSE:
     
     def checkIPO(self,scrip,boid):
         """
+        
         CHECK IPO RESULT
 
         """
-
         scripID = [resp['id'] for resp in requests.get('https://iporesult.cdsc.com.np/result/companyShares/fileUploaded').json()['body'] if resp['scrip']==scrip.upper()][0]
 
         return requests.post(
@@ -306,4 +310,4 @@ class NEPSE:
 
 if __name__ =='__main__':
     data= NEPSE()
-    print(data.indices('NEPSE Index', '2021-05-11','2021-08-11'))
+    print(data.indices('NEPSE Index', '2021-05-15','2021-08-11'))
