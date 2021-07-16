@@ -54,6 +54,7 @@ class NEPSE:
             32: 287,
             33: 479,
             34: 613,
+            45: 820,
         }
         
         self.sectors = [{'id': 51, 'indexCode': 'BANKSUBIND', 'indexName': 'Banking SubIndex', 'description': 'Index of All the Listed Commercial Banks', 'sectorMaster': {'id': 37, 'sectorDescription': 'Commercial Banks', 'activeStatus': 'A', 'regulatoryBody': 'Nepal Rastra Bank'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 76657.9194}, {'id': 52, 'indexCode': 'HOTELIND', 'indexName': 'Hotels And Tourism Index', 'description': 'All the companies Listed in Hotels Group', 'sectorMaster': {'id': 39, 'sectorDescription': 'Hotels and Tourism', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 1604.146}, {'id': 53, 'indexCode': 'OTHERSIND', 'indexName': 'Others Index', 'description': 'All the companies Listed in Others  Group', 'sectorMaster': {'id': 40, 'sectorDescription': 'Others', 'activeStatus': 'A', 'regulatoryBody': 'N/A'}, 'activeStatus': 'A', 'keyIndexFlag': 'N', 'baseYearMarketCapitalization': 
@@ -217,7 +218,7 @@ class NEPSE:
         """
 
         resp = requests.get(self.host+'/nots/securityDailyTradeStat/58',headers=self.headers).json()
-        if scrip ==None:
+        if scrip == None:
             return resp
         return [script for script in resp if script['symbol']==scrip.upper()][0]
 
@@ -239,7 +240,10 @@ class NEPSE:
         """
 
         scripID = [security for security in self.securities if security['symbol']==scrip.upper()][0]['securityId']
-        resp = requests.get(self.host+f'nots/market/graphdata/{scripID}',headers=self.headers).json()
+        resp = requests.post(self.host+f'nots/market/graphdata/{scripID}', headers=self.headers, json = {'id': 820}).json()
+        if not resp:
+            data = {'id': self.fetchPayload()}
+            resp= requests.post(self.host+f'nots/market/graphdata/{scripID}', headers=self.headers, json=data).json()
         if start_date:
             start_date = self.dateFilter(start_date,resp)
             start_index = next((index for (index, d) in enumerate(resp) if d["businessDate"] == start_date), None)
